@@ -19,7 +19,11 @@ router.post('/', [uploader.single('picture')], async (req, res, next) => {
     // Respondo con error al user
   }
 
-  // A partir de aquí guardo cosas en mi DB usando la URL del archivo
+  // A partir de aquí guardo cosas en mi DB usando la URL del archivo en file.secure_url
+  // await Tweet.create({
+  //   text: req.body.text,
+  //   picture: file.secure_url,
+  // });
 
   res.status(201).json({
     data: {
